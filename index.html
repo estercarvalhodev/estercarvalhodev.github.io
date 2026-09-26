@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ester Carvalho | Desenvolvedora Web</title>
+    <meta name="description" content="Portfólio de Ester Carvalho, desenvolvedora web em formação. HTML, CSS, JavaScript e Python.">
+    <meta name="theme-color" content="#0F0619">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ester Carvalho | Desenvolvedora Web">
+    <meta property="og:description" content="Portfólio de desenvolvimento web com projetos em HTML, CSS e JavaScript.">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%23E5238A'/%3E%3Ctext x='50' y='67' font-size='50' font-weight='800' text-anchor='middle' fill='white' font-family='Arial,sans-serif'%3EEC%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+        <div class="container topo__inner">
+            <a class="logo" href="#inicio" aria-label="Ester Carvalho, voltar ao início">EC<span>.</span></a>
+
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="menu" class="menu" aria-label="Principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#projetos">Projetos</a>
+                <a class="menu__cta" href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        <section id="inicio" class="hero">
+            <div class="container hero__grid">
+
+                <div class="hero__texto">
+                    <p class="rotulo">// olá, eu sou</p>
+                    <h1>Ester Carvalho</h1>
+                    <p class="hero__cargo">Desenvolvedora Web</p>
+                    <p class="hero__lead">
+                        Crio páginas responsivas e interativas com HTML, CSS e JavaScript,
+                        e estou dando meus primeiros passos em Python.
+                    </p>
+
+                    <div class="hero__acoes">
+                        <a class="btn btn--primario" href="#projetos">Ver projetos</a>
+                        <a class="btn btn--fantasma" href="#contato">Falar comigo</a>
+                    </div>
+
+                    <ul class="chips" aria-label="Tecnologias">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+
+                <div class="foto" aria-hidden="false">
+                    <div class="foto__janela">
+                        <img src="imagens/minha-foto.jpeg" alt="Retrato de Ester Carvalho" width="1080" height="1920">
+                    </div>
+                    <span class="tag tag--1">&lt;html&gt;</span>
+                    <span class="tag tag--2">{ css }</span>
+                    <span class="tag tag--3">js()</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sobre" class="secao">
+            <div class="container">
+                <header class="secao__topo">
+                    <p class="rotulo">// sobre</p>
+                    <h2>Sobre mim</h2>
+                </header>
+
+                <div class="sobre__grid">
+                    <div class="sobre__texto">
+                        <p>
+                            Sou a Ester, desenvolvedora web em formação. Estou construindo minha carreira
+                            em tecnologia do zero, aprendendo na prática: criando páginas, errando,
+                            corrigindo e evoluindo a cada projeto.
+                        </p>
+                        <p>
+                            Gosto de interfaces bonitas, organizadas e que funcionam bem em qualquer tela.
+                            Meu foco agora é o front-end, e busco minha primeira oportunidade para crescer na área.
+                        </p>
+                    </div>
+
+                    <dl class="ficha">
+                        <div>
+                            <dt>Foco</dt>
+                            <dd>Front-end</dd>
+                        </div>
+                        <div>
+                            <dt>Aprendendo</dt>
+                            <dd>Python</dd>
+                        </div>
+                        <div>
+                            <dt>Busco</dt>
+                            <dd>Primeira oportunidade</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="secao">
+            <div class="container">
+                <header class="secao__topo">
+                    <p class="rotulo">// habilidades</p>
+                    <h2>O que eu já sei fazer</h2>
+                </header>
+
+                <div class="skills">
+                    <article class="skill">
+                        <div class="skill__icone skill__icone--rosa">HTML</div>
+                        <h3>HTML5</h3>
+                        <p>Estrutura de páginas com títulos, seções, menus, imagens e links.</p>
+                    </article>
+
+                    <article class="skill">
+                        <div class="skill__icone skill__icone--violeta">CSS</div>
+                        <h3>CSS3</h3>
+                        <p>Layouts com flexbox, degradês, sombras, efeitos de hover e transições.</p>
+                    </article>
+
+                    <article class="skill">
+                        <div class="skill__icone skill__icone--ouro">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>Eventos, funções e manipulação da página, além de guardar dados no navegador com localStorage.</p>
+                    </article>
+
+                    <article class="skill">
+                        <div class="skill__icone skill__icone--lilas">PY</div>
+                        <h3>Python</h3>
+                        <p>Primeiros passos: lógica de programação e scripts simples.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="secao">
+            <div class="container">
+                <header class="secao__topo">
+                    <p class="rotulo">// projetos</p>
+                    <h2>Projetos</h2>
+                </header>
+
+                <div class="projetos">
+                    <article class="projeto projeto--real">
+                        <div class="projeto__capa" aria-hidden="true">
+                            <span>Bella <em>Nails</em></span>
+                        </div>
+                        <div class="projeto__corpo">
+                            <span class="selo selo--ok">Projeto conceito</span>
+                            <h3>Studio Bella Nails</h3>
+                            <p>Landing page de um studio de unhas, com seletor de cores que muda o esmalte na ilustração e agendamento que monta a mensagem pronta para o WhatsApp.</p>
+                            <ul class="chips chips--pequenos" aria-label="Tecnologias usadas">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a class="projeto__link" href="projetos/studio-bella-nails/index.html">Ver projeto <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+
+                    <article class="projeto projeto--real">
+                        <div class="projeto__capa projeto__capa--foco" aria-hidden="true">
+                            <span>foco<em>.</em></span>
+                        </div>
+                        <div class="projeto__corpo">
+                            <span class="selo selo--ok">Projeto conceito</span>
+                            <h3>Foco: organizador de estudos</h3>
+                            <p>App com lista de tarefas por prioridade, barra de progresso e timer Pomodoro. Tudo fica salvo no navegador, mesmo depois de fechar a página.</p>
+                            <ul class="chips chips--pequenos" aria-label="Tecnologias usadas">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>localStorage</li>
+                            </ul>
+                            <a class="projeto__link" href="projetos/foco-estudos/index.html">Ver projeto <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="secao">
+            <div class="container">
+                <div class="contato">
+                    <p class="rotulo">// contato</p>
+                    <h2>Vamos conversar?</h2>
+                    <p class="contato__texto">
+                        Estou aberta a oportunidades, projetos e feedbacks.
+                        Me chame por e-mail ou pelo LinkedIn.
+                    </p>
+
+                    <div class="hero__acoes hero__acoes--centro">
+                        <a class="btn btn--primario" href="mailto:euestercarvalho@gmail.com">Enviar e-mail</a>
+
+                        <!-- Quando tiver o link do LinkedIn: troque o # pelo endereço e apague "btn--breve" e o aria-disabled -->
+                        <a class="btn btn--fantasma btn--breve" href="#" aria-disabled="true">LinkedIn (em breve)</a>
+                    </div>
+
+                    <p class="contato__email">euestercarvalho@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; <span id="ano">2026</span> Ester Carvalho. Feito com HTML, CSS e JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

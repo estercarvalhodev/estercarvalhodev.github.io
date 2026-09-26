@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foco | Organizador de estudos com Pomodoro</title>
+    <meta name="description" content="Organizador de estudos com lista de tarefas, prioridades e timer Pomodoro. Projeto de Ester Carvalho.">
+    <meta name="theme-color" content="#071319">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%2307222B'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%232DE1C2' stroke-width='9'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="skip" href="#app">Pular para o app</a>
+
+    <header class="topo">
+        <div class="container topo__inner">
+            <a class="logo" href="index.html" aria-label="Foco, início">foco<span>.</span></a>
+            <p class="topo__data" id="dataHoje"></p>
+            <a class="voltar" href="../../index.html#projetos">&larr; Portfólio</a>
+        </div>
+    </header>
+
+    <main id="app" class="container">
+
+        <section class="intro">
+            <h1>Estude com <em>foco</em>, uma tarefa de cada vez.</h1>
+            <p>Organize suas tarefas por prioridade e use o timer Pomodoro para manter o ritmo.</p>
+        </section>
+
+        <div class="grade">
+
+            <section class="cartao timer" data-modo="foco" aria-labelledby="tituloTimer">
+                <h2 id="tituloTimer">Timer Pomodoro</h2>
+
+                <div class="modos" role="group" aria-label="Modo do timer">
+                    <button class="modo" type="button" data-modo="foco" aria-pressed="true">Foco</button>
+                    <button class="modo" type="button" data-modo="pausa" aria-pressed="false">Pausa</button>
+                    <button class="modo" type="button" data-modo="longa" aria-pressed="false">Pausa longa</button>
+                </div>
+
+                <div class="anel">
+                    <svg viewBox="0 0 200 200" aria-hidden="true">
+                        <circle class="anel__fundo" cx="100" cy="100" r="90"></circle>
+                        <circle class="anel__progresso" id="anelProgresso" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="anel__texto">
+                        <span id="tempo" class="anel__tempo" role="timer" aria-live="off">25:00</span>
+                        <span id="modoNome" class="anel__modo">Foco</span>
+                    </div>
+                </div>
+
+                <div class="timer__acoes">
+                    <button id="btnIniciar" class="btn btn--primario" type="button">Iniciar</button>
+                    <button id="btnReiniciar" class="btn btn--fantasma" type="button">Reiniciar</button>
+                </div>
+
+                <div class="campo">
+                    <label for="tarefaAtual">Focando em</label>
+                    <select id="tarefaAtual"></select>
+                </div>
+
+                <p class="ciclos">Ciclos de foco hoje: <strong id="ciclosHoje">0</strong></p>
+                <p id="avisoTimer" class="aviso" role="status" aria-live="polite"></p>
+            </section>
+
+            <section class="cartao tarefas" aria-labelledby="tituloTarefas">
+                <div class="tarefas__topo">
+                    <h2 id="tituloTarefas">Tarefas</h2>
+                    <p id="resumo" class="resumo"></p>
+                </div>
+
+                <div class="progresso" id="progresso" role="progressbar" aria-label="Progresso das tarefas" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="progresso__barra" id="barra"></div>
+                </div>
+
+                <form id="formTarefa" class="novo">
+                    <label class="sr" for="novoTitulo">Nova tarefa</label>
+                    <input id="novoTitulo" class="novo__titulo" type="text" placeholder="O que você vai estudar?" maxlength="80" autocomplete="off" required>
+
+                    <label class="sr" for="novaPrioridade">Prioridade</label>
+                    <select id="novaPrioridade">
+                        <option value="alta">Alta</option>
+                        <option value="media" selected>Média</option>
+                        <option value="baixa">Baixa</option>
+                    </select>
+
+                    <label class="sr" for="novoPrazo">Prazo (opcional)</label>
+                    <input id="novoPrazo" type="date">
+
+                    <button class="btn btn--primario" type="submit">Adicionar</button>
+                </form>
+
+                <div class="filtros" role="group" aria-label="Filtrar tarefas">
+                    <button class="filtro" type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+                    <button class="filtro" type="button" data-filtro="pendentes" aria-pressed="false">Pendentes</button>
+                    <button class="filtro" type="button" data-filtro="feitas" aria-pressed="false">Concluídas</button>
+                </div>
+
+                <ul id="lista" class="lista"></ul>
+                <p id="vazio" class="vazio" hidden>Nenhuma tarefa por aqui. Que tal adicionar a primeira?</p>
+
+                <button id="limpar" class="limpar" type="button">Limpar concluídas</button>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>Projeto conceito de Ester Carvalho. Suas tarefas ficam salvas só neste navegador (localStorage).</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
