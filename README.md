@@ -15,4 +15,5 @@ Não precisa instalar nada: abra o arquivo `index.html` no navegador.
 
 ## Contato
 
-euestercarvalho@gmail.com
+- E-mail: euestercarvalho@gmail.com
+- LinkedIn: [linkedin.com/in/ester-carvalho-20a6b92aa](https://www.linkedin.com/in/ester-carvalho-20a6b92aa)
